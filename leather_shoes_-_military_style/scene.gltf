@@ -1,0 +1,284 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 30588,
+      "max": [
+        2.1229710578918457,
+        1.6931840181350708,
+        1.2871060371398926
+      ],
+      "min": [
+        -0.5060303807258606,
+        -1.2008622884750366,
+        -0.0002720384218264371
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 367056,
+      "componentType": 5126,
+      "count": 30588,
+      "max": [
+        0.9999825954437256,
+        0.9999319911003113,
+        0.9999493956565857
+      ],
+      "min": [
+        -0.999915599822998,
+        -0.9999203681945801,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 30588,
+      "max": [
+        0.9998720288276672,
+        0.9998023509979248,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9994314908981323,
+        -0.9999638795852661,
+        -0.9999986290931702,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 30588,
+      "max": [
+        0.9958000183105469,
+        0.9909999966621399
+      ],
+      "min": [
+        0.00419999985024333,
+        0.00419999985024333
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 118092,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Ramhat (https://sketchfab.com/Ramhat)",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+      "source": "https://sketchfab.com/3d-models/leather-shoes-military-style-9ee71feff47b42eea1291ea75d129519",
+      "title": "Leather Shoes - Military Style"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 472368,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 244704,
+      "byteOffset": 472368,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 734112,
+      "byteOffset": 717072,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 489408,
+      "byteOffset": 1451184,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1940592,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Leather_ShoesNone_baseColor.png"
+    },
+    {
+      "uri": "textures/Leather_ShoesNone_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Leather_ShoesNone_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Leather_ShoesNone",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object001__Leather_ShoesNone_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.15303266048431396,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.3980076637865945e-17,
+        -0.15303266048431396,
+        0.0,
+        0.0,
+        0.15303266048431396,
+        3.3980076637865945e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "668e4962026c4a1db1f1b764cac0e733.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        -1.8475546836853027,
+        3.839625861701279e-08,
+        -1.4851462841033936,
+        1.0
+      ],
+      "name": "Object001"
+    },
+    {
+      "mesh": 0,
+      "name": "Object001__Leather_ShoesNone_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
