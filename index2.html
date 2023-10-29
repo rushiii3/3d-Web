@@ -1,107 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="
-  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
-  "></script>
-  <link href="
-  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-  " rel="stylesheet">
-  <style>
-    .splide__slide img {
-  width: 100%;
-  height: auto;
-}
-  </style>
+    <title>HTML to Word Conversion</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.2.2/docx.js"></script>
+    <script src="https://unpkg.com/html-docx@0.2.1/html-docx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2docx@0.7.1/dist/html2docx.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    table {  
+        font-family: arial, sans-serif;  
+        border-collapse: collapse;  
+        width: 100%;  
+    }  
+    
+    td {  
+        border: 1px solid #dddddd;  
+        text-align: left;  
+        padding: 8px;  
+    } 
+    th{
+        border: 1px solid #dddddd;  
+        text-align: left;  
+        padding: 8px;  
+        background-color: #111;  
+        color:white;
+    }
+    
+    tr:nth-child(odd) {  
+        background-color: #dddddd;  
+    }
+    </style>
 </head>
 <body>
-    <section
-    id="thumbnail-carousel"
-    class="splide"
-    aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
-  >
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://splidejs.com/images/slides/general/01.jpg" alt="">
-        </li>
-      </ul>
-    </div>
-  </section>
-  <script>
-document.addEventListener( 'DOMContentLoaded', function () {
-  new Splide( '#thumbnail-carousel', {
-    type    : 'loop',
-    perPage : 2,
-  autoplay: true,
-		rewind    : true,
-		pagination: false,
-  } ).mount();
-} );
+<div id="exportContent">
+    <h2>This is the HTML content to convert</h2>
+    <p>This is a paragraph of text.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
 
-  </script>
+<button onclick="Export2Word('exportContent', 'word-content.docx');">Export as .docx</button>
+<button id="convertToPDF" onclick="convertToPDF()">Convert to PDF</button>
+<h1>How To Convert HTML To PDF Using JavaScript - Techsolutionstuff</h1>
+<form class="contentToPrint" id="contentToPrint">        
+    <table>  
+        <tbody>  
+            <tr>  
+                <th>Company Name</th>  
+                <th>Employee Name</th>  
+                <th>Country</th>   
+            </tr>  
+            <tr>  
+                <td>Dell</td>  
+                <td>Maria</td>  
+                <td>Germany</td>  
+            </tr>  
+            <tr>  
+                <td>Asus</td>  
+                <td>Francisco</td>  
+                <td>Mexico</td>  
+            </tr>  
+            <tr>  
+                <td>Apple</td>  
+                <td>Roland</td>  
+                <td>Austria</td>  
+            </tr>  
+            <tr>  
+                <td>HP</td>  
+                <td>Helen</td>  
+                <td>UK</td>  
+            </tr>  
+            <tr>  
+                <td>Lenovo</td>  
+                <td>Yoshi</td>  
+                <td>Canada</td>  
+            </tr>
+        </tbody>  
+    </table><br>  
+    <input type="button" id="create_pdf" value="Generate PDF">  
+</form>  
+
+
+
+<button onclick="Convert_HTML_To_PDF();">Convert HTML to PDF</button>
+
+<!-- HTML content for PDF creation -->
+<div id="contentToPrint1">
+    <h1>What is Lorem Ipsum?</h1>
+	
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	
+    <img src="https://media.istockphoto.com/id/1402577565/photo/colour-swatches-book.webp?b=1&s=170667a&w=0&k=20&c=5oYyljXxGN1aolUSuyLLAii11_bcDb-tiVq0iGV7N5I=">
+
+    <img src="https://nikonrumors.com/wp-content/uploads/2014/03/Nikon-1-V3-sample-photo.jpg">
+</div>
 </body>
 </html>
+
+<script>
+window.jsPDF = window.jspdf.jsPDF;
+
+// Convert HTML content to PDF
+function Convert_HTML_To_PDF() {
+    var doc = new jsPDF();
+	
+    // Source HTMLElement or a string containing HTML.
+    var elementHTML = document.querySelector("#contentToPrint");
+
+    doc.html(elementHTML, {
+        callback: function(doc) {
+            // Save the PDF
+            doc.save('document-html.pdf');
+        },
+        margin: [10, 10, 10, 10],
+        autoPaging: 'text',
+        x: 0,
+        y: 0,
+        width: 190, //target width in the PDF document
+        windowWidth: 675 //window width in CSS pixels
+    });
+}
+</script>
